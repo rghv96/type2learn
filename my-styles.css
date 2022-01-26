@@ -16,10 +16,10 @@
 .timer, .errors,
 .accuracy, .wpm {
   background-color: #ccda46;
-  height: 60px;
+  /* height: 60px; */
   width: 70px;
   margin: 8px;
-  padding: 12px;
+  /* padding: 12px; */
   border-radius: 20%;
   box-shadow: black 5px 8px 5px;
 }

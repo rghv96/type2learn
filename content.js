@@ -11,11 +11,7 @@ let timeTimer = null
 let popupTimer = null
 
 let paragraphs = document.getElementsByTagName("p")
-if (characterSpans.length === 0) {
-    spanText(characterSpans)
-}
 function updateTimeTimer() {
-    // console.log('incrementing time')
     timeElapsed++;
 }
 
@@ -44,7 +40,7 @@ function resetValues() {
     clearInterval(timeTimer);
     clearInterval(popupTimer);
     timeTimer = setInterval(updateTimeTimer, 1000);
-    popupTimer = updatePopupTimer(updatePopupTimer, 5000);
+    popupTimer = setInterval(updatePopupTimer, 3000);
 }
 
 
@@ -65,6 +61,7 @@ function spanText(characterSpans) {
         arrayTmpSpans = Array.from(tmpSpans)
         characterSpans.push.apply(characterSpans, arrayTmpSpans)
     }
+    console.log('highlighting first letter');
     characterSpans[0].classList.add('current')
 }
 
@@ -120,16 +117,4 @@ function replace(message, sender, sendresponse) {
     if (characterSpans.length > message.length) {
         characterSpans[message.length].classList.add('current')
     }
-
-    //update popup text
-    console.log('update real time')
-    chrome.storage.sync.set({'curr_wpm': wpm}, function() {
-        console.log('curr_wpm is set to ' + wpm);
-    });
-    chrome.storage.sync.set({'curr_errors': errors}, function() {
-        console.log('curr_errors is set to ' + errors);
-    });
-    chrome.storage.sync.set({'curr_accuracy': accuracy}, function() {
-        console.log('curr_accuracy is set to ' + accuracy);
-    });
 }
