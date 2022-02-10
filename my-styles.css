@@ -13,25 +13,60 @@
     /* background: palegoldenrod; */
 }
 
-.timer, .errors,
-.accuracy, .wpm {
-  background-color: #ccda46;
+.wpm {
+  background-color: palegreen;
   /* height: 60px; */
   width: 70px;
   margin: 8px;
   /* padding: 12px; */
   border-radius: 20%;
   box-shadow: black 5px 8px 5px;
+  align-content: center;
+}
+
+.accuracy {
+  background-color: palegoldenrod;
+  /* height: 60px; */
+  width: 70px;
+  margin: 8px;
+  /* padding: 12px; */
+  border-radius: 20%;
+  box-shadow: black 5px 8px 5px;
+  align-content: center;
+}
+
+.errors {
+  background-color: #da6446;
+  /* height: 60px; */
+  width: 70px;
+  margin: 8px;
+  /* padding: 12px; */
+  border-radius: 20%;
+  box-shadow: black 5px 8px 5px;
+  align-content: center;
 }
 
 .header_text {
-    text-transform: uppercase;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 600;
+    align-items: center;
   }
 
 .curr_time, .curr_errors,
 .curr_accuracy, .curr_cpm,
 .curr_wpm {
-  font-size: 2.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.userinput {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.table_cell {
+  text-align: center;
 }
