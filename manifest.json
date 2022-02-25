@@ -1,6 +1,6 @@
 {
   "name": "Type2Learn",
-  "description": "Type all the text present in by yourself!",
+  "description": "Learn by typing the webpage text in the browswer itself!",
   "version": "0.0.1",
   "manifest_version": 3,
   "background": {
@@ -16,7 +16,7 @@
   ],
   "browser_action" : {
     "default_popup" : "popup.html",
-    "default_title" : "A popup will come"
+    "default_title" : "Type2Learn"
  },
   "action": {
     "default_popup": "popup.html",

@@ -1,5 +1,6 @@
 console.log("Chrome Extension ready to go!");
 
+let paragraphs = document.getElementsByTagName("p")
 let characterSpans = []
 let start = 0
 let errors = 0;
@@ -9,8 +10,6 @@ let timeElapsed = 0
 let wpm = 0
 let timeTimer = null
 let popupTimer = null
-
-let paragraphs = document.getElementsByTagName("p")
 
 function updateTimeTimer() {
     timeElapsed++;
@@ -40,7 +39,7 @@ function resetValues() {
     clearInterval(timeTimer);
     clearInterval(popupTimer);
     timeTimer = setInterval(updateTimeTimer, 1000);
-    popupTimer = setInterval(updatePopupTimer, 3000);
+    popupTimer = setInterval(updatePopupTimer, 1000);
 }
 
 function removePreviousSpans() {
