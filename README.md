@@ -1,23 +1,14 @@
 # TYPE2LEARN
-
-Pending features:
-
-- recognise user input directly instead of text box
-- select paragraph/text to type
+<img src="images/rcd128.png" align="right"
+     alt="TYPE2LEARN logo" width="120" height="178">
 
 
-- beautify popup
-- add donation link
+### How to install?
 
+Download the extension from the chrome extension store
 
-Launch checklist
-- readme
-- license
-- add product hunt widget in readme
-
-
-Steps
-- press keyboard keys to activate extension(creates span)
-- select text
-- click on extension icon, popup opens
-- start typing
+### Steps to use the extension
+1) Select a paragraph by clicking on it or selecting any word from it
+2) Click on the extension icon in the toolbar. A popup will appear.
+3) Click on the button - Prepare Text
+4) Start typing from the beginning of the selected paragraph.
