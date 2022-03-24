@@ -1,4 +1,4 @@
-console.log("Chrome Extension ready to go!");
+// console.log("Chrome Extension ready to go!");
 
 let paragraphs = document.getElementsByTagName("p")
 let characterSpans = []
@@ -49,7 +49,7 @@ function removePreviousSpans() {
         if (inSelection) {
             newSpans.push(characterSpans[i]);
         }
-        if (characterSpans[i].classList.contains('current')) {
+        if (characterSpans[i].classList.contains('current_character')) {
             inSelection = 1
             newSpans.push(characterSpans[i])
         }
@@ -67,7 +67,7 @@ function replace(message, sender, sendresponse) {
     }
 
     characterSpans.every((characterSpan) => {
-        characterSpan.classList.remove('current')
+        characterSpan.classList.remove('current_character')
         return true
     })
 
@@ -75,7 +75,7 @@ function replace(message, sender, sendresponse) {
     charactersTyped = 0
 
     characterSpans.every((characterSpan, index) => {
-        characterSpan.classList.remove('current')
+        characterSpan.classList.remove('current_character')
         if (index >= message.length) {
             return false
         }
@@ -101,6 +101,6 @@ function replace(message, sender, sendresponse) {
     wpm = Math.round((((charactersTyped / 5) / timeElapsed) * 60));
 
     if (characterSpans.length > message.length) {
-        characterSpans[message.length].classList.add('current')
+        characterSpans[message.length].classList.add('current_character')
     }
 }

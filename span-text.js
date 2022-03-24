@@ -16,7 +16,7 @@ for (para of paragraphs) {
 
 if (window.getSelection) {
     let sel = window.getSelection()
-    sel.anchorNode.parentElement.classList.add('current')
+    sel.anchorNode.parentElement.classList.add('current_character')
     if (window.getSelection().empty) {  // Chrome
       window.getSelection().empty();
     } else if (window.getSelection().removeAllRanges) {  // Firefox
@@ -24,6 +24,6 @@ if (window.getSelection) {
     }
 } else {  // IE?
     if (characterSpans.length > 0) {
-        characterSpans[0].classList.add('current')
+        characterSpans[0].classList.add('current_character')
     }
 }

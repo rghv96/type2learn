@@ -1,7 +1,7 @@
 {
   "name": "Type2Learn",
-  "description": "Learn by typing the webpage text in the browswer itself!",
-  "version": "0.0.1",
+  "description": "Learn by typing the webpage text in the browser itself!",
+  "version": "0.0.4",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"

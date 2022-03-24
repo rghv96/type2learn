@@ -1,4 +1,4 @@
-console.log("popup.js running!");
+// console.log("popup.js running!");
 let isSpanned = 0
 
 chrome.storage.onChanged.addListener(function(changes, namespace) {
@@ -23,9 +23,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('added event listener')
     start_button = document.getElementById('prepare_text')
-    console.log(start_button)
     start_button.onclick = spanText
 });
 

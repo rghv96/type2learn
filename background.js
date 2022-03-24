@@ -6,7 +6,7 @@ chrome.runtime.onInstalled.addListener((reason) => {
   }
 });
 
-console.log("background running");
+// console.log("background running");
 chrome.browserAction.onClicked.addListener(setup);
 
 function setup() {
