@@ -4,7 +4,7 @@
   "version": "0.0.4",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "permissions": ["storage", "activeTab", "scripting"],
   "content_scripts": [
@@ -14,10 +14,6 @@
       "css": ["my-styles.css"]
     }
   ],
-  "browser_action" : {
-    "default_popup" : "popup.html",
-    "default_title" : "Type2Learn"
- },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
