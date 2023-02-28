@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener((reason) => {
 });
 
 // console.log("background running");
-chrome.browserAction.onClicked.addListener(setup);
+chrome.action.onClicked.addListener(setup);
 
 function setup() {
   noCanvas();

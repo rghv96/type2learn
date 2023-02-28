@@ -14,15 +14,15 @@ for (para of paragraphs) {
     characterSpans.push.apply(characterSpans, arrayTmpSpans)
 }
 
-if (window.getSelection) {
-    let sel = window.getSelection()
-    sel.anchorNode.parentElement.classList.add('current_character')
-    if (window.getSelection().empty) {  // Chrome
-      window.getSelection().empty();
-    } else if (window.getSelection().removeAllRanges) {  // Firefox
-      window.getSelection().removeAllRanges();
+if (window.getSelection().anchorNode != null) {
+    let sel = window.getSelection().anchorNode
+    // sel.anchorNode.parentElement.classList.add('current_character')
+    if (sel.nodeName == "#text") { // Chrome(-ium)
+        sel.parentElement.classList.add('current_character')
+    } else if (sel.nodeName == "P") { // Firefox: For some reason, getSelection() doesn't select the #text-node but the paragraph its surrounded in
+        sel.childNodes[0].classList.add('current_character');
     }
-} else {  // IE?
+} else {  // If no paragraph was selected
     if (characterSpans.length > 0) {
         characterSpans[0].classList.add('current_character')
     }
